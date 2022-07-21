@@ -14,16 +14,21 @@ opt.add_experimental_option("prefs", {
 driver = webdriver.Chrome(chrome_options=opt)
 driver.maximize_window()
 
+# Open webpage
 driver.get('http://canvas.aut.ac.nz/')
 
+# Find username and password element and send login information
 username_field = driver.find_element_by_id('username')
 username_field.click()
+#enter your username
 username_field.send_keys('[ENTER YOUR USERNAME HERE]')
 
 password_field = driver.find_element_by_id('password')
 password_field.click()
+#enter your username
 password_field.send_keys('[ENTER YOUR PASS HERE]')
 
+#login
 login_btn = driver.find_element_by_class_name('form-button')
 login_btn.click()
 
@@ -32,6 +37,8 @@ calender = driver.find_element_by_id('global_nav_calendar_link').click()
 agenda = driver.find_element_by_id('agenda').click()
 
 time.sleep(5)
+
+#change lecture element for class you want to attend
 
 lecture = driver.find_element_by_xpath("//span[contains(@class,'group_course_10963') and contains(text(), 'COMP700 Session 2')]").click()
 
@@ -44,6 +51,8 @@ teamsBrowser = driver.find_element_by_xpath('/html[@class="ltr uiv2"]/body/div[@
 
 time.sleep(5)
 
+#Joining the meeting
+
 onteams = driver.find_element_by_id('username')
 onteams.click()
 onteams.send_keys('Himansh')
@@ -53,3 +62,10 @@ mute = driver.find_element_by_css_selector('[track-summary="Toggle microphone OF
 cover = driver.find_element_by_css_selector('[track-summary="Toggle camera OFF in meeting pre join screen"]').click()
 time.sleep(2)
 joinclassnow = driver.find_element_by_css_selector('[track-summary="join meeting from pre-join screen"]').click()
+
+#Time in lecture/meeting
+time.sleep(7200)
+
+driver.close()
+
+# :)
