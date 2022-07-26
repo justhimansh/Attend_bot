@@ -4,8 +4,8 @@
 This is my first project that uses selenium automation testing. I decided to create an
 automation (bot) which goes to my lectures for me. This project can be run at certain
 times which can be set within the script so it will always be on time for a meeting. 
-It simply opens up chrome, logs into my university's webpage and types in my login, 
-finds my class to attend, joins the meeting on team with my name and with microphone
+It simply opens up chrome, types my username and password and logs in, 
+finds my class to attend, joins the meeting on team by writing my name and with microphone
 and webcam disabled. The bot also quits the meeting after the length of 2 hours which 
 is how long a lecture normally is. 
 
